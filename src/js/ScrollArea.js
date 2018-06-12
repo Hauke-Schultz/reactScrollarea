@@ -56,7 +56,7 @@ export default class ScrollArea extends Component {
       },
     };
 
-    this.evntsPreviousValues = {
+    this.eventPreviousValues = {
       clientX: 0,
       clientY: 0,
       deltaX: 0,
@@ -406,7 +406,6 @@ export default class ScrollArea extends Component {
     let { deltaX, deltaY } = this.eventPreviousValues;
     const { timestamp } = this.eventPreviousValues;
 
-    if (typeof deltaX === 'undefined') deltaX = 0;
     if (typeof deltaX === 'undefined') deltaX = 0;
     if (typeof deltaY === 'undefined') deltaY = 0;
     if (Date.now() - timestamp < 200) {
